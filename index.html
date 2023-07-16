@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EG-IX</title>
+
+    <link href="/assets/img/fav.png" rel="shortcut icon" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    
+
+    <!-- Vendor CSS Files -->
+
+    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    
+
+        <link href="/assets/css/style.css" rel="stylesheet">
+
+
+    <!-- Include the site responsive  stylesheet -->
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="~/Scripts/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    <style>
+        #containerHighchart {
+            height: 200px;
+        }
+
+        .highcharts-figure,
+        .highcharts-data-table table {
+            min-width: 300px;
+            max-width: 800px;
+            margin: 1em auto;
+        }
+
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #ebebeb;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table td,
+        .highcharts-data-table th,
+        .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table thead tr,
+        .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+
+        .chart_hover {
+            /*  display:block!important;*/
+        }
+
+        #PeakIn, #AverageIn, #CurrentIn, #PeakOut, #CurrentOut, #AverageOut {
+            font-size: 14px !important;
+        }
+
+        .Averagecss, .Currentcss {
+            margin-top: 20%;
+            margin-bottom: 20%;
+            margin-left: 0%;
+        }
+        .headerpadding {
+            padding: 7px 0!important
+        }
+    </style>
+    <script src="/Scripts/jquery.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="/Scripts/highcharts.js"></script>
+    <script src="/Scripts/exporting.js"></script>
+    <script src="/Scripts/export-data.js"></script>
+    <script src="/Scripts/accessibility.js"></script>
+    
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundledist.min.js"></script>
+    
+
+
+    <meta name="description" content="The description of my page" />
+
+</head>
+<body class="single single-product woocommerce woocommerce-page">
+    <input id="keyPage" name="keyPage" type="hidden" value="home" />
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top headerpadding" >
+        <div class="container d-flex align-items-center">
+            <div class="nav-cont">
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+
+                        <li class="dropdown">
+                            <a href="/Pages/Index/42?type=1"><span>Exchange</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li style="display:none;" class="mobile-li"><a href="/Pages/Index/42?type=1">Exchange</a></li>
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Connect</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="/Pages/Index/39?type=1">How to Connect?</a></li>
+                                        <li><a href="/Pages/TechnicalDetails/43?type=1">Technical Details</a></li>
+                                        <!--<li><a href="#">Fees</a></li>-->
+                                    </ul>
+                                </li>
+                                <li><a href="https://www.peeringdb.com/ix/3812" target="_blank">Connected Networks</a></li>
+                                
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Pages/NewPageDetailsEgix/32"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+
+                                <li>
+                                    <a href="/Pages/NewPageDetailsEgix/32">Internet Peering</a>
+                                </li>
+                                <li>
+                                    <a href="/Pages/NewPageDetailsEgix/33">Colocation</a>
+                                </li>
+                                
+                                
+                                <li><a href="#">Remote Peering</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/Home/About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+
+                                <li><a href="/Home/About">About Us</a></li>
+
+                                <li><a href="#">News & Media</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="/Home/ContactUs">Contact Us</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+
+                            <a target="_blank"   href=" https://oss-ui-eg.ixaas.net/EG-IX/login"><span class="login">Login</span></a>
+                          
+                        </li>
+
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+                <h1 class="logo me-auto">
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <a href="/" class="logo me-auto me-lg-0">
+                        <img src="/assets/img/EG-IX-Logo.png" alt="" class="img-fluid">
+                        <img src="/assets/img/EG-IX_small.png" alt="" class="img-fluid mobileview">
+                    </a>
+                </h1>
+            </div>
+            <div class="header-social-links d-flex">
+                <a href="#" class="twitter">
+                    <div class="twitter-img">
+                        <img src="/assets/img/newchart_main.png" />
+                    </div>
+                    <div class="twitter-text">
+                        <div class="twitter-text-left">
+                            <h4>Average</h4>
+                            <h4 id="AverageInchart"></h4>
+                        </div>
+                        <div class="twitter-text-right">
+                            <h4>Peak</h4>
+                            <h4 id="PeakInchart"></h4>
+                        </div>
+                    </div>
+                </a>
+                
+                <div class="chart_hover">
+
+                    
+                    <div class="row" id="ChartDivId">
+                        <div class="col-md-6">
+                            <figure class="highcharts-figure">
+                                <div id="containerHighchart"></div>
+
+                            </figure>
+                        </div>
+                   
+                            <div class="col-md-3 col-md-right">
+                                <h4 style="font-size: 20px;">Peak In</h4>
+                                <h4 id="PeakIn"></h4>
+                                <div class="Averagecss">
+                                    <h4 style="font-size: 20px;">Average In</h4>
+                                    <h4 id="AverageIn"></h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-md-left">
+                                <h4 style="font-size: 20px;">Peak Out</h4>
+                                <h4 id="PeakOut"></h4>
+                                <div class="Averagecss">
+                                    <h4 style="font-size: 20px;">Average Out</h4>
+                                    <h4 id="AverageOut"></h4>
+                                </div>
+                                <!--<div class="Currentcss">
+        <h4 style="font-size: 20px;">Current Out</h4>
+        <h4 id="CurrentOut">-->
+                                
+                                <!--</h4>
+        </div>-->
+                            </div>
+                        
+                    </div>
+                </div>
+                <input type="button" class=" btn btn-default" style="display:none" name="ShowResult_Id" id="ShowResult_Id" value="Show Result" />
+
+                <a href="#" class="facebook">
+                    
+                </a>
+            </div>
+
+
+        </div>
+    </header>
+
+
+
+
+    <!--slider-->
+    
+
+<!--<section id="hero" style="height:523px;">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-inner" role="listbox">-->
+<!-- Slide 1 -->
+<!--<div class="carousel-item active" style="background-image: url(/assets/img/slide/slide-1.png);">
+                <div class="carousel-container">
+                    <div class="carousel-content animate__animated animate__fadeInUp">
+                        <h2>EGYPT- <span>IX</span></h2>
+                        <p>Your interconnection platform in <br /> Egypt</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <ol style="display:none;" class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+    </div>
+</section>-->
+<!-- End Hero -->
+<!--<main id="main">-->
+<!-- ======= Our Clients Section ======= -->
+<!--<section id="clients" class="clients">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
+
+            <div class="col-lg-5 col-md-4 col-6">
+                <div class="client-logo">
+                    <h2>Internet Peering</h2>
+                    <p>
+                        Egypt-IX Internet Peering service enables direct network interconnections bringing all networks closer, and localizing the traffic. Internet traffic will be exchanged using only one connection and cross connect.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-4 col-6">
+                <div class="client-logo">
+                    <h2>Colocation</h2>
+                    <p>
+                       Egypt-IX infrastructure is hosted in Regional Data Hub â€œRDHâ€, the first Tier III datacenter in Egypt, featuring highest security and controlled environments.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>-->
+<!-- End Our Clients Section -->
+<!--</main>--><!-- End #main -->
+
+<section id="hero" style="height:523px;">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-inner" role="listbox">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url(/assets/img/slide/slide-1.png);">
+                <div class="carousel-container">
+                    <div class="carousel-content animate__animated animate__fadeInUp">
+                        <h2>EGYPT- <span>IX</span></h2>
+                        <p>Your interconnection platform in <br /> Egypt</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <ol style="display:none;" class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Our Clients Section ======= -->
+    <section id="clients" class="clients">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
+                    <div class="col-lg-5 col-md-4 col-6">
+                        <div class="client-logo">
+                            <a href="/Pages/NewPageDetailsEgix/32">
+                                <h2>
+Internet Peering                                </h2>
+                        </a>
+                            <p>
+Egypt-IX Internet Peering service enables direct network interconnections bringing all networks closer, and localizing the traffic. Internet traffic will be exchanged using only one connection and cross connect.
+                            </p>
+                    </div>
+                </div>
+                    <div class="col-lg-5 col-md-4 col-6">
+                        <div class="client-logo">
+                            <a href="/Pages/NewPageDetailsEgix/33">
+                                <h2>
+Colocation                                </h2>
+                        </a>
+                            <p>
+Egypt-IX infrastructure is hosted in Regional Data Hub &ldquo;RDH&rdquo;, the first Tier III datacenter in Egypt, featuring highest security and controlled environments. 
+                            </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Our Clients Section -->
+
+</main><!-- End #main -->
+
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 col-xm-6 footer-contact">
+                        <img src="/assets/img/EG-IX-Logo.png">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-xm-6 footer-links footer-links-left">
+                        <a href="/Pages/Index/42?type=1"><h4>Exchange</h4></a>
+                        <ul>
+                            <li><i class="bx "></i> <a href="/Pages/Index/39?type=1">How to Connect?</a></li>
+                            <li><i class="bx "></i> <a href="/Pages/TechnicalDetails/43?type=1">Technical Details</a></li>
+                            <!--<li><i class="bx "></i> <a href="#">Fees</a></li>-->
+                            <li><i class="bx "></i> <a href="/Home/ConnectedNetworks">Connected Networks</a></li>
+                            <li><i class="bx "></i> <a href="/Home/TermsConditions">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-xm-6 footer-links footer-links-right">
+                        <a href="/Pages/NewPageDetailsEgix/32"><h4>Services</h4></a>
+                        <ul>
+                            <li><i class="bx "></i> <a href="/Pages/NewPageDetailsEgix/32">Internet Peering</a></li>
+                            <li><i class="bx "></i> <a href="/Pages/NewPageDetailsEgix/33">Colocation</a></li>
+                            <li><i class="bx "></i> <a href="#">Remote Peering</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-xm-6 footer-links footer-links-left">
+                        <a href="/Home/About"><h4>About</h4></a>
+                        <ul>
+                            <li><i class="bx "></i> <a href="/Home/About">About Us</a></li>
+                            <li><i class="bx "></i> <a href="#">News &amp; Media</a></li>
+                            <li><i class="bx "></i> <a href="#">Events</a></li>
+                            <li><i class="bx "></i> <a href="/Home/ContactUs">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-newsletter footer-links-right">
+                        <img class="powerby" src="/assets/img/powerdBy.svg">
+                        <img class="minipowerby" src="/assets/img/mini-powerby.svg">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/aos/aos.js"></script>
+    
+
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/js/main.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            $("#menu-main-menu li").removeClass("current-menu-item");
+            var pageKey = $("#keyPage").val();
+            $('#' + pageKey).addClass("current-menu-item");
+
+            $("#serviceId").change(function() {
+                var serviceId = $("#serviceId option:selected").val();
+                if (serviceId == 2) {
+                    $("#specialitiesId").show();
+
+                } else {
+                    $("#specialitiesId").hide();
+                }
+            });
+
+            $(".cityddl").change(function () {
+                var id = $('.cityddl').find(":selected").val();
+                jQuery.ajax({
+                    url: '/Home/GetAllCityByGovId',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ govId: id }),
+                    success: function (result) {
+                        $(".regionddl").empty().append(result);
+                        $("#cityId").val(id);
+                        $("#regionId").val('0');
+                        var regionId = $(".cityddl option:selected").val();
+                        if (regionId == 14 || regionId == 3) {
+                            if (1 == 0) {
+                                $("#citylabel").text("المنطقه");
+                                $("#cityId").prepend($("<option selected='selected'>كل المناطق</option>"));
+                            } else {
+                                $("#citylabel").text("Area");
+                                $("#cityId").prepend($("<option selected='selected'>All Area</option>"));
+                            }
+
+                        } else {
+                            if (1 == 0) {
+                                $("#citylabel").text("المدينة");
+                                $("#cityId").prepend($("<option selected='selected'>كل المدن</option>"));
+                            } else {
+                                $("#citylabel").text("City");
+                                $("#cityId").prepend($("<option selected='selected'>All Cities</option>"));
+                            }
+                        }
+                    },
+                    beforeSend: function () {
+                        $('#city-loader').show();
+                    },
+                    complete: function () {
+                        $('#city-loader').hide();
+                    }
+                });
+            });
+
+            var options = {
+                url: "/Home/AutoComplete",
+                getValue: function(element) {
+                    return element;
+                },
+                ajaxSettings: {
+                    dataType: "json",
+                    method: "POST",
+                    data: {
+                        dataType: "json"
+                    }
+                },
+                preparePostData: function (data) {
+                    data.cityId = $('#cityId').find(":selected").val();
+                    data.govId = $('.cityddl').find(":selected").val();
+                    data.serviceId = $('#serviceId').find(":selected").val();
+                    data.specialitiesId = $('#specialitiesId select').find(":selected").val();
+                    data.phrase = $(".autocomplete-ajax").val();
+                    return data;
+                },
+                list: {
+                    sort: {
+                        enabled: false
+                    },
+                    maxNumberOfElements: 20,
+                    match: {
+                        enabled: true
+                    }
+                },
+                theme: "square"
+            };
+        //    $(".autocomplete-ajax").easyAutocomplete(options);
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('#ShowResult_Id').click()
+        //    SendMailFunction()
+        })
+        var NewCat = [];
+        var Values = [];
+        var NewCatList = [];
+
+        $('#ShowResult_Id').click(function () {
+            $("#ChartDivId").css("display", "flex")
+
+            $.ajax({
+                //url: "https://192.168.129.140:446/api/TransactionDashboard/GetAllData?FromDate=2022-01-01&ToDate=2022-03-08",
+                //url: "http://localhost:62470/api/TransactionDashboard/GetAllData?FromDate=2022-01-01&ToDate=2022-03-08",
+                //url: "https://my-eg.ixaas.net/api/v1/stats/public?exchange=EG&periods=daily",
+                //url: "https://my-eg.ixaas.net/api/v1/stats/public?exchange=EG",
+                url: "https://my-eg.ixaas.net/api/v1/stats/public?exchange=EG&periods=weekly",
+                type: "GET",
+                ContentType: "application/json",
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    debugger
+                    Values = data.data.traffic_statistics.weekly.regular.data.map(a => a.average_input);
+                    NewCat = data.data.traffic_statistics.weekly.regular.data.map(a => a.time);
+                    var mm = data.data.traffic_statistics.weekly.regular.data.map(a => a.time);
+                    //new Date(1648972800 * 1000).toUTCString()
+                    $.each(mm, function (key, value) {
+                        var date = new Date(value*1000);
+                        var x = date.getHours() +":" + date.getMinutes()
+                        NewCatList.push(x)
+                    })
+
+                    var LastItem = data.data.traffic_statistics.weekly.regular.data.sort((a, b) => parseInt(a.time) - parseInt(b.time))[data.data.traffic_statistics.weekly.regular.data.length - 1];
+                    $("#PeakIn").text(LastItem.peak_input.toString().substring(0, 2) + LastItem.peak_input.toFixed(2).toString().slice(-3) + " " + "GB/S");
+                    $("#PeakOut").text(LastItem.peak_output.toString().substring(0, 2) + LastItem.peak_output.toFixed(2).toString().slice(-3) + " " + "GB/S");
+                    $("#AverageIn").text(((LastItem.average_input) != null ? (LastItem.average_input.toString().substring(0, 2) + LastItem.average_input.toFixed(2).toString().slice(-3)):( "0")) + " " + "GB/S");
+                    $("#AverageOut").text((LastItem.average_output != null ? LastItem.average_output.toString().substring(0, 2) + LastItem.average_output.toFixed(2).toString().slice(-3): "0" )+ " " + "GB/S");
+
+
+                    $("#PeakInchart").text(LastItem.peak_input.toString().substring(0, 2) + LastItem.peak_input.toFixed(2).toString().slice(-3) + " " + "GB/S");
+                    $("#AverageInchart").text((LastItem.average_input != null ? LastItem.average_input.toString().substring(0, 2) + LastItem.average_input.toFixed(2).toString().slice(-3) : "0") + " " + "GB/S");
+                    DrawHighcharts();
+                    $(".highcharts-no-tooltip").css("display", "none")
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+
+            });
+        })
+        function DrawHighcharts() {
+            //debugger
+            Highcharts.chart('containerHighchart', {
+                chart: {
+                    type: 'areaspline'
+                },
+                tooltip: {
+                    enabled: false
+                },
+                title: {
+                    text: 'Total Weekly'
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'top',
+
+                    y: 100,
+                    floating: true,
+                    borderWidth: 1,
+                    backgroundColor:
+                        Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
+                },
+
+
+                xAxis:
+                {
+                    type: 'datetime',
+                    tickInterval: 5,
+
+                    //accessibility: {
+                    //    rangeDescription: 'Range: 1 to 10'
+                    categories: $.each(NewCatList.sort(function (a, b) { return a - b }), function (key, value) {
+                        //debugger
+                        [value]
+                    })
+                    //categories:  function () {
+                    //    //debugger
+                    //    alert("hiii")
+                    //    var data;
+                    //    //debugger
+                    //    for (var i = 0; i < CatString.length; i++) {
+                    //        data.push({
+                    //            name: CatString[i],
+                    //            categories: CatString.xAxisTime
+                    //        })
+                    //    };
+                    //    console.log(data)
+                    //    return data;
+                    //}
+                    /*CatString*/
+                    //categories:[CatString]
+
+                    //categories: [
+                    //    x,
+                    //    '00:00',
+                    //    '08:00',
+                    //    '16:00',
+                    //    '00:00',
+                    //    '08:00'
+                    //]
+                    , plotBands: [{ // visualize the weekend
+                        from: 4.5,
+                        to: 6.5,
+                        color: 'rgba(68, 170, 213, .2)'
+                    }]
+                },
+                yAxis: {
+                    title: {
+                        text: ' '
+                    }
+                },
+                tooltip: {
+                    shared: false,
+                    enabled: false,
+                    valueSuffix: ' units'
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    areaspline: {
+                        fillOpacity: 0.5
+                    }
+                },
+                series: [{
+                    data:/* [20, 30, 40, 25, 60, 20]*/ Values
+                }]
+            });
+
+        }
+        function SendMailFunction() {
+            var ToMail = "moustafa.a.ibahim@te.eg";
+            var CcMail = "Mohamed.elmelegy@te.eg";
+            var BccMail = "Mohamed.elmelegy@te.eg";
+            var Subject = "Subject Test";
+            var Boody = "Boody Test";
+            $.ajax({
+                //url: "https://192.168.129.140:449/api/SendMail/SendMailFunction?ToMail=" + ToMail + "&CcMail=" + CcMail + "&BccMail=" + BccMail + "&Subject=" + Subject + "&Boody=" + Boody,
+                //url: "http://localhost:62470/api/SendMail/SendMail?ToMail=" + ToMail + "&CcMail=" + CcMail + "&BccMail=" + BccMail + "&Subject=" + Subject + "&Boody=" + Boody,
+                url: "https://localhost:44386/api/SendMail/SendMail?ToMail=" + ToMail + "&CcMail=" + CcMail + "&BccMail=" + BccMail + "&Subject=" + Subject + "&Boody=" + Boody ,
+                //url: '/Account/SendMail',
+                type: "POST",
+                ContentType: "application/json",
+                //data: { Message: Message, Email: Email },
+                dataType: "json",
+                async: true,
+                success: function (result) {
+                    //debugger
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+
+            });
+        }
+
+
+    </script>
+</body>
+</html>
